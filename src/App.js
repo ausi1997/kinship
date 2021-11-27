@@ -51,7 +51,7 @@ function App() {
           }
         };
         var request = gapi.client.calendar.events.insert({
-          'calendarId': 'ausafen1018@gmail.com',
+          'calendarId': 'primary',
           'resource': event
         });
         
