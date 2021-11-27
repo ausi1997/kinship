@@ -24,15 +24,15 @@ function App() {
       gapi.auth2.getAuthInstance().signIn()
       .then(()=>{
         var event = {
-          'summary': 'Event4',
+          'summary': 'PartyNight',
          // 'location': '800 Howard St., San Francisco, CA 94103',
           'description': 'A chance to hear more about Google\'s developer products.',
           'start': {
-            'dateTime': '2021-12-12T09:00:00-07:00',
+            'dateTime': '2021-12-20T09:00:00-07:00',
             'timeZone': 'America/Los_Angeles'
           },
           'end': {
-            'dateTime': '2021-12-13T17:00:00-07:00',
+            'dateTime': '2021-12-20T17:00:00-07:00',
             'timeZone': 'America/Los_Angeles'
           },
           'recurrence': [
