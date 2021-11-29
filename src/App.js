@@ -24,22 +24,22 @@ function App() {
       gapi.auth2.getAuthInstance().signIn()
       .then(()=>{
         var event = {
-          'summary': 'PartyNight',
+          'summary': 'NightOut',
          // 'location': '800 Howard St., San Francisco, CA 94103',
           'description': 'A chance to hear more about Google\'s developer products.',
           'start': {
-            'dateTime': '2021-12-20T12:00:00-07:00',
+            'dateTime': '2021-12-29T12:00:00-07:00',
             'timeZone': 'UTC+05:30'
           },
           'end': {
-            'dateTime': '2021-12-20T14:00:00-07:00',
+            'dateTime': '2021-12-29T14:00:00-07:00',
             'timeZone': 'UTC+05:30'
           },
           'recurrence': [
             'RRULE:FREQ=DAILY;COUNT=2'
           ],
           'attendees': [
-            {'email': 'lpage@example.com'},
+            {'email': 'ausafsjc97@gmail.com'},
             {'email': 'sbrin@example.com'}
           ],
           'reminders': {
