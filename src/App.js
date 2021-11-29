@@ -35,9 +35,9 @@ function App() {
             'dateTime': '2021-12-29T14:00:00-07:00',
             'timeZone': 'UTC+05:30'
           },
-          'recurrence': [
-            'RRULE:FREQ=DAILY;COUNT=2'
-          ],
+          // 'recurrence': [
+          //   'RRULE:FREQ=DAILY;COUNT=2'
+          // ],
           'attendees': [
             {'email': 'ausafsjc97@gmail.com'},
             {'email': 'sbrin@example.com'}
