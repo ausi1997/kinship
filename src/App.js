@@ -1,4 +1,6 @@
 import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import GoogleLogin from 'react-google-login';
 
 function App() {
 
@@ -8,6 +10,14 @@ function App() {
   var discovery_docs =  ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
   var scopes = "https://www.googleapis.com/auth/calendar.events";
 
+
+  const responseSuccessGoogle = (response)=>{
+    console.log(response);
+  }
+
+  const responseFailureGoogle = (resp)=>{
+   console.log(resp);
+  }
 
   const addEvent = ()=>{
     gapi.load('client:auth2' , ()=>{
@@ -64,8 +74,19 @@ function App() {
       
   }
   return (
-    <div className="App">
+    <div className="App" >
+    <div>
     <button type="button" onClick={addEvent}>Add Event</button>
+    </div>
+    <div style={{marginTop:'20px'}}>
+    <GoogleLogin
+    clientId="70141150723-u5r46rtfre5e2tdtnnj3n175ks3jkjti.apps.googleusercontent.com"
+    buttonText="Login with Google"
+    onSuccess={responseSuccessGoogle}
+    onFailure={responseFailureGoogle}
+    cookiePolicy={'single_host_origin'}
+  />
+  </div>
      
     </div>
   );
