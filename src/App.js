@@ -1,6 +1,8 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+//import axios from "axios";
 
 function App() {
 
@@ -13,10 +15,22 @@ function App() {
 
   const responseSuccessGoogle = (response)=>{
     console.log(response);
+
+    // axios({
+    //   method:'POST',
+    //   url:"http://localhost:8000/api/googlelogin",
+    //   data:{tokenId: response.tokenId}
+    // }).then(response =>{
+    //   console.log(response);
+    // })
   }
 
   const responseFailureGoogle = (resp)=>{
    console.log(resp);
+  }
+
+  const responseSuccessFacebook = (response)=>{
+    console.log(response);
   }
 
   const addEvent = ()=>{
@@ -86,6 +100,15 @@ function App() {
     onFailure={responseFailureGoogle}
     cookiePolicy={'single_host_origin'}
   />
+  </div>
+  <div style={{marginTop:'20px'}}>
+  <FacebookLogin
+    appId="873255453283482"
+    autoLoad={false}
+    //fields="name,email,picture"
+    //onClick={componentClicked}
+    callback={responseSuccessFacebook}
+     />,
   </div>
      
     </div>
