@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "DMSans-Bold";
+    src: url("../assets//fonts/DMSans-Bold.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-BoldItalic";
+    src: url("../assets//fonts/DMSans-BoldItalic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Italic";
+    src: url("../assets/fonts/DMSans-Italic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Medium";
+    src: url("../assets//fonts/DMSans-Medium.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-MediumItalic";
+    src: url("../assets/fonts/DMSans-MediumItalic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Regular";
+    src: url("../assets/fonts/DMSans-Regular.ttf") format(".TTF");
+  }
+
+.login .container{
+    background-color: #ffffff;
+    width: 400px;
+    height: 700px;
+}
+.LogoDiv{
+    padding-top: 25px;
+    height: 70px;
+    text-align: center;  
+}
+.welcome-div{
+    margin-top: 20px;
+    text-align: center;
+}
+.welcome-div h4{
+    font-size: 24px;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.welcome-div p{
+    font-size: 16px;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.form-control-ausi{
+    width: 352px;
+    height: 56px;
+    padding: 20px 231px 20px 16px;
+    border-radius: 4px;
+    border: solid 1px rgba(151, 151, 151, 0.34);
+}
+.form-forgot-password{
+    margin: 16px 2px 24px 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    color: #187bad;
+    font-family:"DMSans-Bold", sans-serif ;
+}
+.login-button{
+    width: 352px;
+    height: 52px;
+    background-color: #4f5c73;
+    color: #ffffff;
+    font-size: 24px;
+    font-family:"DMSans-Medium", sans-serif ;
+}
+.signup-link-div{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.signup-link-text{
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.sign-up-link{
+    margin-left: 10px;
+    color: #2b86b4;
+    font-weight: bold;
+    font-family:"DMSans-Bold", sans-serif ;
+}
+.login-page-partition{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-family:"DMSans-Medium", sans-serif ;
+}
+.login-partition-line{
+    width: 154px;
+    height: 2px;
+    margin: 6px 0 6px 0;
+    background-color: #dfe2e7;
+}
+.login-page-partition span{
+    margin: 0 12px;
+    font-family: DMSans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+}
+.social-login{
+    margin-top: 30px;
+    text-align: center;
+}
+.google-login-btn button{
+    width: 352px; 
+    height: 52px;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    text-transform: none;
+    margin: 12px 10px 0px;
+    padding: 10px 80px 10px 40px !important;
+    border-radius: 4px !important;
+    border: solid 1px #c5cbd2 !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.social-login svg{
+    display: none;
+}
+ .facebook-login-btn button{
+    width: 352px; 
+    height: 52px;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    text-transform: none;
+    margin: 12px 10px 0px;
+    padding: 10px 60px 10px 16px !important;
+    border-radius: 4px !important;
+    border: solid 1px #c5cbd2 !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.social-login-btn-logo{
+    position: absolute;
+    /* position: relative; */
+    /* left: 50px; */
+    margin-top: 22px;
+    margin-left: 25px;
+}
+
+
+
+.forgot-password .container{
+    height: 490px;
+    width: 400px;
+    background-color: #ffffff;
+}
+.forgot-password-content-div{
+    text-align: center;
+    margin-top: 30px;
+}
+.forgot-password-content-div h4{
+    font-size: 24px;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.forgot-password-content-div p{
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 97%;
+    font-family:"DMSans-Regular", sans-serif ;
+}
+.forgot-password-back{
+  margin: 24px 113px 0 114px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  color: #2b86b4;
+  font-family:"DMSans-Bold", sans-serif ;
+}
