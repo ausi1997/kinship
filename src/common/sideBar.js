@@ -58,7 +58,7 @@ export default class SideBar extends Component {
             
             </ul>
             <div className="sidebar-more-from-hank">
-            <p>MORE FROM HANK</p>
+            <p>MORE FROM KINSHIP</p>
             </div>
             <ul className="nav flex-column mb-0">
             <li className="nav-item sidebar-list">

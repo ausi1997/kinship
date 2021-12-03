@@ -66,3 +66,73 @@
     height: 100%;
     border-radius: 3px;
 }
+.orders-main-div{
+  margin-top: 30px;
+}
+.orders-main-div h4{
+  margin: 0 16px 0 0;
+  font-family: "DMSans-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+.orders-head-line{
+  width: 2px;
+  height: 20px;
+  margin: 2px 20px;
+  background-color: #dbdbdb;
+}
+.orders-main-div p{
+  width: 56px;
+  height: 20px;
+  margin: 3px 0 2px 0px;
+  font-family: "DMSans-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.orders-head-arrow{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.orders-list-div{
+  margin-top: 30px;
+  background-color: #d8f5f7;
+}
+.orders-stars{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 90px;
+  height: 80px;
+}
+.orders-stars img{
+  height: 100%;
+  width: 100%;
+}
+.orders-list-content{
+  margin-top: 20px;
+}
+.orders-list-content p{
+  width: 90%;
+  font-family: "DMSans-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+}
+.orders-list-btn{
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.orders-list-btn button{
+  height: 44px;
+  margin: 16px 16px 0 0;
+  background-color: #2dcbd3;
+  color: #fff;
+  font-size: 18px;
+  font-family: "DMSans-Bold", sans-serif;
+}
+.orders-list-seperation-line{
+  height: 2px;
+  margin: 32px 0;
+  background-color: #dadada;
+}

@@ -22,6 +22,9 @@
     font-family: "DMSans-Regular";
     src: url("../fonts/DMSans-Regular.ttf") format(".TTF");
   }
+  .login{
+    background-color: #eff1f5;  
+  }
  
 .login .container{
     background-color: #ffffff;

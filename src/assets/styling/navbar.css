@@ -22,9 +22,7 @@
   font-family: "DMSans-Regular";
   src: url("../fonts/DMSans-Regular.ttf") format(".TTF");
 }
-body{
-    background-color: white;
-}
+
 .kinship-sidebar-main{
     width: 300px;
  /* height: 1940px;*/

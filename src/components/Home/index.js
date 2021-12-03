@@ -3,6 +3,7 @@ import SideBar from '../../common/sideBar';
 import TopBar from '../../common/topBar';
 import '../../assets/styling/home.css';
 import Banner from './banner';
+import Orders from './orders';
 
 
 const Home = ()=>{
@@ -10,8 +11,9 @@ const Home = ()=>{
         <div style={{display:'flex'}}>
         <SideBar></SideBar>
         <div style={{width:'100%'}}>
-        <TopBar></TopBar>
-        <Banner></Banner>
+        <TopBar/>
+        <Banner/>
+        <Orders/>
         
         </div>
         </div>

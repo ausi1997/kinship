@@ -12,7 +12,7 @@ export default class LoginPage extends Component{
     }
     render(){
         return(
-            <div className='login'>
+            <div className='login' id="login">
             <div className="container">
             <div className="loginMainDiv" style={{height:'100%'}}>
             <div className="LogoDiv">
