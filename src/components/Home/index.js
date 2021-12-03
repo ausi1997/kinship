@@ -5,6 +5,7 @@ import '../../assets/styling/home.css';
 import Banner from './banner';
 import Orders from './orders';
 import EventsList from './events';
+import ClassesList from './classes';
 
 
 const Home = ()=>{
@@ -16,6 +17,7 @@ const Home = ()=>{
         <Banner/>
         <Orders/>
         <EventsList/>
+        <ClassesList/>
         
         </div>
         </div>
