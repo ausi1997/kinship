@@ -1,28 +1,28 @@
 @font-face {
     font-family: "DMSans-Bold";
-    src: url("../assets//fonts/DMSans-Bold.ttf") format(".TTF");
+    src: url("../fonts/DMSans-Bold.ttf") format(".TTF");
   }
   @font-face {
     font-family: "DMSans-BoldItalic";
-    src: url("../assets//fonts/DMSans-BoldItalic.ttf") format(".TTF");
+    src: url("../fonts/DMSans-BoldItalic.ttf") format(".TTF");
   }
   @font-face {
     font-family: "DMSans-Italic";
-    src: url("../assets/fonts/DMSans-Italic.ttf") format(".TTF");
+    src: url("../fonts/DMSans-Italic.ttf") format(".TTF");
   }
   @font-face {
     font-family: "DMSans-Medium";
-    src: url("../assets//fonts/DMSans-Medium.ttf") format(".TTF");
+    src: url("../fonts/DMSans-Medium.ttf") format(".TTF");
   }
   @font-face {
     font-family: "DMSans-MediumItalic";
-    src: url("../assets/fonts/DMSans-MediumItalic.ttf") format(".TTF");
+    src: url("../fonts/DMSans-MediumItalic.ttf") format(".TTF");
   }
   @font-face {
     font-family: "DMSans-Regular";
-    src: url("../assets/fonts/DMSans-Regular.ttf") format(".TTF");
+    src: url("../fonts/DMSans-Regular.ttf") format(".TTF");
   }
-
+ 
 .login .container{
     background-color: #ffffff;
     width: 400px;
@@ -48,7 +48,7 @@
 .form-control-ausi{
     width: 352px;
     height: 56px;
-    padding: 20px 231px 20px 16px;
+    padding: 20px 110px 20px 16px;
     border-radius: 4px;
     border: solid 1px rgba(151, 151, 151, 0.34);
 }
@@ -59,6 +59,21 @@
     line-height: 1;
     color: #187bad;
     font-family:"DMSans-Bold", sans-serif ;
+}
+.ausaf-errorMessage{
+    border: 1px solid #ee9aa2;
+    border-radius: 4px;
+    background-color: #f5d5d6;
+    color: #e22a40;
+    height: 30px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+   /* font-family: "Proxima Nova Semibold", sans-serif;*/
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 .login-button{
     width: 352px;

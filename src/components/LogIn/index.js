@@ -1,95 +1,109 @@
-import React from 'react';
-import GoogleLogin from 'react-google-login';
-import FacebookLogin from 'react-facebook-login';
-import Logo from '../../assets/kinship-logo.svg';
-import Facebook from '../../assets/facebook.png';
-import Google from '../../assets/google.png';
+import React, {Component} from 'react';
+
+import axios from 'axios';
 import { BrowserRouter as Routes , Link } from 'react-router-dom';
-import '../../styling/style.css';
+import '../../assets/styling/style.css';
+import LoginPage from './login';
 
 
-const Login = ()=>{
-    return(
-        <div className='login'>
-        <div className="container">
-        <div className="loginMainDiv" style={{height:'100%'}}>
-        <div className="LogoDiv">
-        <img src={Logo} alt="logo"/>
-        
-        </div>
-        <div className='welcome-div'>
-        <h4 className='welcome'>Welcome</h4>
-        <p>Login to kinship to continue to your order</p>
-        </div>
-        
-        <form style={{paddingTop:'10px' , textAlign:'center'}}>
-  <div class="form-group"  >
-   
-    <input type="email" class="form-control-ausi" id="txtLoginEmail" name="txtLoginEmail" aria-describedby="emailHelp" placeholder="Enter email"/>
+export default class Login extends Component {
     
-  </div>
-  <div class="form-group" >
-    <input type="password" class="form-control-ausi" id="txtLoginPassword" name="txtLoginPassword" placeholder="Password"/>
-    <div style={{textAlign:'start', marginLeft:'10px' , marginTop:'5px'}}>
-    <Routes>
-    <Link to="/forgot-password">
-    <small id="emailHelp" class="form-forgot-password">
-    Forgot Password?</small>
-    </Link>
-    </Routes>
-    
-    </div>
-  </div>
-  <button type="submit" class="btn login-button" id="btnLoginButton" name="btnLoginButton">Continue</button>
-  <div className='signup-link-div'>
-  <div className="signup-link-text"><p>Don't have an account?</p></div>
-  <div className="sign-up-link"><p>Sign up</p></div>
-  </div>
-  </form>
-  <div className='login-page-partition'>
-  <div className='login-partition-line'></div>
-  <span>OR</span>
-  <div className='login-partition-line'></div>
-  </div>
+    constructor(){
+        super();
+        this.state = {
+            txtLoginEmail:'',
+            txtLoginPassword:'',
+            txtLoginValidationMessage:'',
+            txtFacebookLoginEmail:''
+        }
+    }
 
-  <div className='social-login'>
-  <div className="google-login-btn" style={{display:'flex'}}>
-  <img className="social-login-btn-logo" src={Google} alt="google"/>
-  <GoogleLogin
-  clientId="70141150723-u5r46rtfre5e2tdtnnj3n175ks3jkjti.apps.googleusercontent.com"
-  buttonText="Continue with Google"
-  id="btnGoogleLoginButton"
-  name="btnGoogleLoginButton"
- // onSuccess={responseSuccessGoogle}
-  // onFailure={responseFailureGoogle}
-  cookiePolicy={'single_host_origin'}
- />
-  </div>
+    
+
+    HandleLoginInputs = (e)=>{
+        const val = e.target.value;
+        const name = e.target.name;
+        this.setState({ [name]: val });
+        if (name === "txtLoginEmail") this.txtLoginEmail = val;
+        else if (name === "txtLoginPassword") this.txtLoginPassword = val;
+    }
+
+    Login = ()=>{
+        const emailExpn = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
  
- <div className='facebook-login-btn' style={{display:'flex'}}>
- <img className="social-login-btn-logo" src={Facebook} alt = "facebook"/>
- <FacebookLogin
-      appId="873255453283482"
-      autoLoad={false}
-      textButton="Continue with Facebook"
-      id="btnFacebookLoginButton"
-      name="btnFacebookLoginButton"
-      //fields="name,email,picture"
-      //onClick={componentClicked}
-      //callback={responseSuccessFacebook}
-       />
-       </div>
+        if(this.state.txtLoginEmail === '' || emailExpn.test(this.state.txtLoginEmail) !== true){
+            this.setState({
+                txtLoginValidationMessage:'Enter Valid Email'
+            })
+            return false
 
-  </div>
-        </div>
-        
-        </div>
+        }
 
+        else{
+            this.setState({
+                txtLoginValidationMessage:''
+            })
+        }
+        if(this.state.txtLoginPassword === ''){
+            this.setState({
+                txtLoginValidationMessage:'Please Enter your password'
+            })
+            return false
+        }
+        else{
+            this.setState({
+                txtLoginValidationMessage:''
+            })
+        }
+        if(this.state.txtLoginValidationMessage === ''){
+           let data = {
+               email:this.state.txtLoginEmail,
+               password:this.state.txtLoginPassword
+            }
+
+            console.log(data);
+        }
+    }
+
+     responseSuccessGoogle = (response)=>{
+       // console.log(response);
+          let data = {
+              email:response.profileObj.email
+          }
+          console.log(data);
+      }
+
+      responseFailureGoogle = (resp)=>{
+        console.log(resp);
+       }
+     
+     responseSuccessFacebook = (response)=>{
+        axios({
+          method:'GET',
+          url:`https://graph.facebook.com/v2.11/${response.userID}/?fields=id,name,email&access_token=${response.accessToken}`
+        }).then(res=>{
+            this.setState({
+                txtFacebookLoginEmail:res.data.email
+            })
+        })
+       let data = {
+           email:this.state.txtFacebookLoginEmail
+       }
+       console.log(data);
+      }
+    
+
+    render(){
         
-        </div>
-        
-    )
+        return(
+            <LoginPage txtLoginEmail={this.state.txtLoginEmail} txtLoginPassword={this.state.txtLoginPassword}
+            txtLoginValidationMessage={this.state.txtLoginValidationMessage} txtFacebookLoginEmail={this.state.txtFacebookLoginEmail}
+            Login={this.Login} HandleLoginInputs={this.HandleLoginInputs} responseSuccessGoogle={this.responseSuccessGoogle}
+            responseFailureGoogle={this.responseFailureGoogle} responseSuccessFacebook={this.responseSuccessFacebook}
+            />
+        )
+    }
+    
 }
 
 
-export default Login;

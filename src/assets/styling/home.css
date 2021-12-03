@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "DMSans-Bold";
+    src: url("../fonts/DMSans-Bold.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-BoldItalic";
+    src: url("../fonts/DMSans-BoldItalic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Italic";
+    src: url("../fonts/DMSans-Italic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Medium";
+    src: url("../fonts/DMSans-Medium.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-MediumItalic";
+    src: url("../fonts/DMSans-MediumItalic.ttf") format(".TTF");
+  }
+  @font-face {
+    font-family: "DMSans-Regular";
+    src: url("../fonts/DMSans-Regular.ttf") format(".TTF");
+  }
+
+.home-banner{
+   
+  margin: 25px 0 0 0;
+ /* padding: 40px 40px 40px 50px;*/
+  border-radius: 4px;
+  background-color: #eff1f5;
+}
+.home-banner-content-div{
+    width: 88%;
+    height: 80%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.home-banner-content-div h4{
+    font-family: "DMSans-Medium", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+.home-banner-content-div p{
+  margin: 20px 0px 24px 0;
+  font-family: "DMSans-Regular", sans-serif;
+  font-size: 17px;
+  line-height: 1.56;
+}
+.home-banner-content-div button{
+    width: 202px;
+    height: 42px;
+    background-color: #2dcbd3;
+    color: white;
+    font-size: 18px;
+    font-family: "DMSans-Bold", sans-serif;
+}
+.home-banner-img-div{
+    margin-left: 70px;
+    margin-top: 40px;
+    width: 75%;
+    height: 70%;
+}
+.home-banner-img-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}

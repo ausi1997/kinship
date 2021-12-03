@@ -17,9 +17,7 @@ function App() {
     <div className="App" >
     <Routes>
     <switch>
-    <Link to = ''>Home</Link>
-    <Link to = '/login'>Login</Link>
-    <Link to = '/signup'>SignUp</Link>
+    
 
     <Route exact path='/'>
     <Home/>

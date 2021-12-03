@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "DMSans-Bold";
+  src: url("../fonts/DMSans-Bold.ttf") format(".TTF");
+}
+@font-face {
+  font-family: "DMSans-BoldItalic";
+  src: url("../fonts/DMSans-BoldItalic.ttf") format(".TTF");
+}
+@font-face {
+  font-family: "DMSans-Italic";
+  src: url("../fonts/DMSans-Italic.ttf") format(".TTF");
+}
+@font-face {
+  font-family: "DMSans-Medium";
+  src: url("../fonts/DMSans-Medium.ttf") format(".TTF");
+}
+@font-face {
+  font-family: "DMSans-MediumItalic";
+  src: url("../fonts/DMSans-MediumItalic.ttf") format(".TTF");
+}
+@font-face {
+  font-family: "DMSans-Regular";
+  src: url("../fonts/DMSans-Regular.ttf") format(".TTF");
+}
+body{
+    background-color: white;
+}
+.kinship-sidebar-main{
+    width: 300px;
+ /* height: 1940px;*/
+  margin: 0 2px 0 0;
+  padding: 20px 0 1391px 12px;
+  background-color: #eff1f5;
+}
+.sidebar-logo{
+    margin-left: 15px;
+}
+.sidebar-order-btn{
+    margin-left: 4px;
+}
+.sidebar-order-btn button{
+    width: 252px;
+  height: 44px;
+  margin: 23px 0px 23px 0px;
+  background-color: #2dcbd3;
+  font-family: "DMSans-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+}
+.sidebar-list{
+    width: 288px;
+    height: 40px;
+    margin: 10px 0 0px;
+    padding: 12px 80px 0px 0px;
+}
+.sidebar-list:hover{
+    background-color: #fff;
+}
+.sidebar-items{
+  padding: 0% !important;
+  font-family: "DMSans-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  margin-left: 5px;
+  color: black;
+}
+.sidebar-items:hover{
+    color: #000;
+}
+.sidebar-icons{
+    width: 20px;
+  height: 17px;
+  margin: 0 35px 0 0;
+  object-fit: contain;
+  opacity: 0.67;
+}
+.sidebar-more-from-hank{
+  margin: 25px 0px 0px 5px;
+  font-family: "DMSans-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: #585858;
+}
