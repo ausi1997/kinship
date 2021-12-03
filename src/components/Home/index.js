@@ -4,6 +4,7 @@ import TopBar from '../../common/topBar';
 import '../../assets/styling/home.css';
 import Banner from './banner';
 import Orders from './orders';
+import EventsList from './events';
 
 
 const Home = ()=>{
@@ -14,6 +15,7 @@ const Home = ()=>{
         <TopBar/>
         <Banner/>
         <Orders/>
+        <EventsList/>
         
         </div>
         </div>
